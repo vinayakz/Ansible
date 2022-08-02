@@ -1,5 +1,5 @@
 ---
-- hosts: jenkins
+- hosts: ec2
   become: yes
   tasks:
     - name: install apache
