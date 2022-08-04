@@ -1,6 +1,6 @@
 ---
 - name: Install packages
-  hosts: centos
+  hosts: ec2
   become: yes
   vars:
     packages:
