@@ -22,23 +22,23 @@ PLAY [ec2] *********************************************************************
 TASK [Gathering Facts] *************************************************************************************************************************************************************************
 [WARNING]: Platform linux on host 172.28.32.65 is using the discovered Python interpreter at /usr/bin/python, but future installation of another Python interpreter could change this. See
 https://docs.ansible.com/ansible/2.9/reference_appendices/interpreter_discovery.html for more information.
-ok: [172.28.35.54]
+ok: [172.28.32.65]
 
 TASK [create company list] *********************************************************************************************************************************************************************
-changed: [172.28.35.54]
+changed: [172.28.32.65]
 
 TASK [add names] *******************************************************************************************************************************************************************************
-changed: [172.28.35.54] => (item=Infosys)
-changed: [172.28.35.54] => (item=TCS)
-changed: [172.28.35.54] => (item=CTS)
-changed: [172.28.35.54] => (item=Accenture)
-changed: [172.28.35.54] => (item=Reliance)
-changed: [172.28.35.54] => (item=LAndT)
-changed: [172.28.35.54] => (item=PAndG)
-changed: [172.28.35.54] => (item=Hero Honda)
+changed: [172.28.32.65] => (item=Infosys)
+changed: [172.28.32.65] => (item=TCS)
+changed: [172.28.32.65] => (item=CTS)
+changed: [172.28.32.65] => (item=Accenture)
+changed: [172.28.32.65] => (item=Reliance)
+changed: [172.28.32.65] => (item=LAndT)
+changed: [172.28.32.65] => (item=PAndG)
+changed: [172.28.32.65] => (item=Hero Honda)
 
 PLAY RECAP *************************************************************************************************************************************************************************************
-172.28.35.54              : ok=3    changed=2    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0
+172.28.32.65              : ok=3    changed=2    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0
 
 [ansible@ip-172.28.35.54 variable]$
 ```
