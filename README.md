@@ -87,3 +87,23 @@ $ ansible (inventory name ex- localhost or centos) -b -m yum -a "name=git state=
  - To remove the user
   $ ansible lab2 -b -m user -a “name=testansi state=absent”
  ``` 
+# Ansible Gathering Information-Facts
+- Facts provide specific information about a given target host
+- The setup module can retrieve facts per target basis
+- Facts are collected by default on playbook execution but can be set
+  to no using “ gather_facts ” in
+- Custom facts may be setup using facts.d directory:
+  - Create / etc / facts.d directory
+  - Files inside this directory should end with .fact and available to system as
+    local facts
+  - Files can be INI, JSON, or executables that return JSON
+  - Facts are returned with ansible_local variable
+  - Facts may be used in conditionals or printed using variable syntax
+- From Commandline (output is JSON format)
+
+```sh
+ $ ansible ec2 -m setup -a 'filter=*ipv4*'
+``` 
+- In Playbook under host you can mention
+  - host
+  - Gather_facts : yes or no based on your need
