@@ -1,0 +1,14 @@
+---
+
+- hosts: ec2
+  tasks: 
+    - name: create a file
+      file: 
+        path: /home/ansible/abc.txt
+        state: touch
+      register: optouch
+    - debug: msg="Registered output is {{optouch}}"
+    - name: Put the dest and gid in a file
+      lineinfile: 
+        path: /home/ansible/abc.txt
+        line: "{{optouch.dest}}:{{optouch.gid}}"
