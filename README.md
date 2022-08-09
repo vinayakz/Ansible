@@ -107,3 +107,16 @@ $ ansible (inventory name ex- localhost or centos) -b -m yum -a "name=git state=
 - In Playbook under host you can mention
   - host
   - Gather_facts : yes or no based on your need
+  
+## Test connection of two server in ansible 
+```sh
+$ ansible ec2 -m ping
+
+172.35.87.95 | SUCCESS => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python"
+    },
+    "changed": false,
+    "ping": "pong"
+}
+```
